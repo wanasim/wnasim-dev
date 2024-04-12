@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Menu from "@/components/menu";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+const local = localFont({
+  src: "./local_font.woff2",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary`}>
-        <Menu />
-        {children}
+      <body
+        className={`${local.className} ${inter.className} flex h-[10000px] bg-black`}
+      >
+        <div className="fixed inset-0 flex h-full justify-center sm:px-8">
+          <div className="flex flex-row h-full w-full max-w-7xl lg:px-8">
+            <div className="relative h-full w-full ring-2 bg-zinc-900 ring-zinc-300/20 px-12">
+              <Menu />
+
+              {children}
+            </div>
+          </div>
+        </div>
+        <footer>
+          <h1 className=" float-end"> Walid is here</h1>
+        </footer>
       </body>
     </html>
   );

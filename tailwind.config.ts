@@ -10,6 +10,15 @@ const config = {
   ],
   prefix: "",
   theme: {
+    borderRadius: {
+      bottom: "0 0 100vw 100vw",
+      none: "0",
+      sm: "0.125rem",
+      DEFAULT: "0.25rem",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -18,7 +27,12 @@ const config = {
       },
     },
     extend: {
-      // 1B263B
+      aspectRatio: {
+        "1/1.5": "1 / 1.5",
+      },
+      height: {
+        "half-screen": "50vh",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -59,7 +73,26 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        first: "moveVertical 30s ease infinite",
+        second: "moveInCircle 20s reverse infinite",
+        third: "moveInCircle 40s linear infinite",
+        fourth: "moveHorizontal 40s ease infinite",
+        fifth: "moveInCircle 20s ease infinite",
+        linear: "linearHorizontal 10s linear infinite",
+      },
       keyframes: {
+        linearHorizontal: {
+          "0%": {
+            "background-position": " 0% 50%",
+          },
+          "50%": {
+            "background-position": " 100% 50%;",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: {
@@ -72,10 +105,39 @@ const config = {
           },
           to: { height: "0" },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        moveHorizontal: {
+          "0%": {
+            transform: "translateX(-50%) translateY(-10%)",
+          },
+          "50%": {
+            transform: "translateX(50%) translateY(10%)",
+          },
+          "100%": {
+            transform: "translateX(-50%) translateY(-10%)",
+          },
+        },
+        moveInCircle: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(180deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+        moveVertical: {
+          "0%": {
+            transform: "translateY(-50%)",
+          },
+          "50%": {
+            transform: "translateY(50%)",
+          },
+          "100%": {
+            transform: "translateY(-50%)",
+          },
+        },
       },
     },
   },
