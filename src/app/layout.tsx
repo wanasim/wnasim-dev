@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Menu from "@/components/menu";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,20 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${local.className} ${inter.className} flex h-[10000px] bg-black`}
+        className={`${local.className} ${inter.className}} flex h-[10000px] bg-black`}
       >
-        <div className="fixed inset-0 flex h-full justify-center sm:px-8">
-          <div className="flex flex-row h-full w-full max-w-7xl lg:px-8">
-            <div className="relative h-full w-full ring-2 bg-zinc-900 ring-zinc-300/20 px-12">
-              <Menu />
+        <div className="flex w-full">
+          <div className="relative flex w-full flex-col">
+            <Header />
+            <main className="flex-auto">{children}</main>
+          </div>
 
-              {children}
+          <div className="fixed inset-0 flex h-full justify-center sm:px-8">
+            <div className="flex w-full max-w-7xl lg:px-8">
+              <div className="relative h-full w-full ring-2 bg-zinc-900 ring-zinc-300/20 px-12"></div>
             </div>
           </div>
         </div>
-        <footer>
-          <h1 className=" float-end"> Walid is here</h1>
-        </footer>
       </body>
     </html>
   );

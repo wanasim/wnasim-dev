@@ -13,11 +13,20 @@ import {
 import Link from "next/link";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 
+import Image from "next/image";
+
 export default function Menu() {
   return (
-    <>
+    <div className="relative flex gap-4 px-4 sm:px-8 lg:px-12">
       {/* <BackgroundGradientAnimation> */}
-      <div className="absolute top-10 w-full z-10 flex flex-1 justify-end md:justify-center">
+      <Image
+        src="/avatar.jpeg"
+        alt=""
+        width={400}
+        height={400}
+        className=" flex flex-0 rounded-full blur-[.75] ring-1 ring-offset-2 ring-offset-black ring-zinc-300/20 object-cover bg-zinc-800 h-14 w-14"
+      />
+      <div className="w-full z-10 flex flex-1 justify-end md:justify-center">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -63,6 +72,6 @@ export default function Menu() {
         </NavigationMenu>
       </div>
       {/* </BackgroundGradientAnimation> */}
-    </>
+    </div>
   );
 }
