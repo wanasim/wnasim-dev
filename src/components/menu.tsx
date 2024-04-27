@@ -24,9 +24,9 @@ export default function Menu() {
         alt=""
         width={400}
         height={400}
-        className=" flex flex-0 rounded-full blur-[.75] ring-1 ring-offset-2 ring-offset-black ring-zinc-300/20 object-cover bg-zinc-800 h-14 w-14"
+        className=" flex flex-0 z-30 rounded-full blur-[.75] ring-1 ring-offset-2 ring-offset-black ring-zinc-300/20 object-cover bg-zinc-800 h-14 w-14"
       />
-      <div className="w-full z-10 flex flex-1 justify-end md:justify-center">
+      <div className="w-full z-10  flex flex-1 justify-end md:justify-center">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

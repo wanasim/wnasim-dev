@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div className="relative flex items-end gap-20 px-4 sm:px-8 lg:px-12">
-      <div className="group basis-96 relative z-10 max-w-60 aspect-1/1.5 overflow-hidden rounded-bottom hover:scale-110 duration-1000">
+    <div className="relative flex items-end flex-wrap gap-16 px-4 sm:px-8 lg:px-12">
+      <div className="group basis-96 xl:max-w-64 lg:max-w-56 max-w-52 grow relative z-10 aspect-1/1.2 overflow-hidden rounded-bottom hover:scale-110 duration-1000">
         <Image
           width={500}
           height={400}
@@ -21,9 +21,21 @@ export default function Profile() {
           priority
         />
       </div>
-      <h1 className=" text-7xl inline-flex">
-        Software designer, founder, and amateur astronaut.
-      </h1>
+
+      <div className="max-w-2xl">
+        <h1 className="  font-bold text-zinc-100 text-4xl text-balance sm:text-5xl inline-flex">
+          Software engineer, blockchain enthusiast, and
+          crypto trader.
+        </h1>
+        <p className="grow mt-6 text-lg  text-zinc-400">
+          I&apos;m Walid, a full-stack software engineer
+          based in Arlington, Va. I currently work as a
+          senior engineer and team lead Mastercard where we
+          focus the founder and CEO of Planetaria, where we
+          develop technologies that empower regular people
+          to explore space on their own terms.
+        </p>
+      </div>
     </div>
   );
 }
