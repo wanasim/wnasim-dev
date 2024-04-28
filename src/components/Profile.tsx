@@ -27,7 +27,7 @@ export default function Profile() {
           Software engineer, blockchain enthusiast, and
           crypto trader.
         </h1>
-        <p className="grow mt-6 text-lg  text-zinc-400">
+        <p className="grow mt-6 text-lg md:text-xl text-zinc-400">
           I&apos;m Walid, a full-stack software engineer
           based in Arlington, Va. I currently work as a
           senior engineer and team lead Mastercard where we

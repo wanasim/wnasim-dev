@@ -9,9 +9,9 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/ui/NavigationMenu";
 import Link from "next/link";
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import { BackgroundGradientAnimation } from "./ui/BackgroundGradientAnimation";
 
 import Image from "next/image";
 

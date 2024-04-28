@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Profile from "@/components/Profile";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,10 +41,9 @@ export default function RootLayout({
               <div className="relative top-10 sm:px-8 -mb-3">
                 <div className="mx-auto w-full max-w-7xl lg:px-8">
                   <Profile />
+                  {children}
                 </div>
               </div>
-
-              {children}
             </main>
           </div>
         </div>
