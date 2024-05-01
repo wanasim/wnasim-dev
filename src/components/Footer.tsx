@@ -1,4 +1,12 @@
 import Link from "next/link";
+import SocialLink from "@/components/SocialLink";
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  MailIcon,
+  XIcon,
+} from "@/components/ui/SocialIcons";
 
 export default function Footer() {
   const social = [
@@ -89,22 +97,27 @@ export default function Footer() {
       <div className="px-4 sm:px-8 lg:px-12">
         <div className="px-8 py-16 ">
           <div className="mt-32 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-            <div className="flex space-x-6 md:order-1">
-              {social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-zinc-400 group hover:text-red-700"
-                >
-                  <span className="sr-only">
-                    {item.name}
-                  </span>
-                  <item.icon
-                    className="h-6 w-6 text-blue-600"
-                    aria-hidden="true"
-                  />
-                </a>
-              ))}
+            <div className="flex items-start space-x-6 md:order-1">
+              <SocialLink
+                href="#"
+                icon={XIcon}
+              ></SocialLink>
+              <SocialLink
+                href="#"
+                icon={InstagramIcon}
+              ></SocialLink>
+              <SocialLink
+                href="#"
+                icon={GitHubIcon}
+              ></SocialLink>
+              <SocialLink
+                href="#"
+                icon={LinkedInIcon}
+              ></SocialLink>
+              <SocialLink
+                href="mailto:spencer@planetaria.tech"
+                icon={MailIcon}
+              ></SocialLink>
             </div>
             <p className="mt-8 text-xs leading-5 text-zinc-400 md:order-2 md:mt-0">
               <span className="block text-inherit">

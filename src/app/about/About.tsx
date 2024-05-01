@@ -5,6 +5,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  MailIcon,
   XIcon,
 } from "@/components/ui/SocialIcons";
 
