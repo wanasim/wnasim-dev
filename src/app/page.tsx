@@ -1,4 +1,5 @@
 import Photos from "@/components/Photos";
+import Profile from "@/components/Profile";
 import Values from "@/components/Values";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
@@ -18,18 +19,19 @@ export default function Home() {
   ];
   return (
     <>
+      <Profile />
       <div className="px-4 sm:px-8 lg:px-12">
         <div className="px-8 ">
-          <div className="relative top-20">
+          <div className="mt-32">
             <Photos />
           </div>
 
-          <div className="relative top-44 ">
-            <h3 className="mx-auto text-center text-zinc-400 font-bold text-2xl mb-4 ">
+          <div className="mt-32 ">
+            <h3 className="mx-auto text-left text-zinc-400 font-bold text-2xl mb-4 ">
               My motto
             </h3>
             <TypewriterEffect words={words} />
-            <p className=" text-balance text-center mt-10 text-lg md:text-xl text-zinc-400">
+            <p className=" text-balance text-left mt-10 text-lg md:text-xl text-zinc-400">
               This is going to be text about how I love a
               good challenge. passion from engineering stems
               from the creative process needed to solve a
@@ -61,6 +63,8 @@ export default function Home() {
 
           <Values />
         </div>
+        Resume download and brief breakdown of experience
+        quick link to other pages
       </div>
     </>
   );

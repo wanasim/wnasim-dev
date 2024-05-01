@@ -11,15 +11,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    borderRadius: {
-      bottom: "0 0 100vw 100vw",
-      none: "0",
-      sm: "0.125rem",
-      DEFAULT: "0.25rem",
-      md: "0.375rem",
-      lg: "0.5rem",
-      full: "9999px",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -70,9 +61,14 @@ const config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        bottom: "0 0 100vw 100vw",
+        none: "0",
+        sm: "0.125rem",
+        DEFAULT: "0.25rem",
+        md: "0.375rem",
+        lg: "0.5rem",
+        xl: "1rem",
+        full: "9999px",
       },
 
       animation: {
