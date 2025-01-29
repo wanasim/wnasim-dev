@@ -13,7 +13,6 @@ export default function Header() {
 
     window.addEventListener("scroll", () => {
       const currScrollY = window.scrollY;
-      console.log("executing", prevScrollY, currScrollY);
 
       if (currScrollY > 100 && prevScrollY < currScrollY) {
         updateShowNav(false);

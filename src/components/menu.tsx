@@ -40,7 +40,11 @@ export default function Menu() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link
+                href="/experience"
+                legacyBehavior
+                passHref
+              >
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle()}
                 >
@@ -49,7 +53,11 @@ export default function Menu() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link
+                href="/projects"
+                legacyBehavior
+                passHref
+              >
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle()}
                 >
@@ -58,7 +66,7 @@ export default function Menu() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle()}
                 >

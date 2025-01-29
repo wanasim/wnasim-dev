@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${local.className} ${inter.className}} flex bg-black`}
       >
-        <div className="flex w-full">
+        <div className="flex w-full overflow-x-hidden">
           <div className="fixed inset-0 flex h-full justify-center sm:px-8">
             <div className="flex w-full max-w-7xl lg:px-8">
               <div className="relative h-full w-full ring-2 bg-zinc-900 ring-zinc-300/20 px-12"></div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Profile() {
   return (
     <div className="relative flex items-end flex-wrap gap-16 px-4 sm:px-8 lg:px-12">
-      <div className="group basis-96 xl:max-w-64 lg:max-w-56 max-w-52 grow relative z-10 aspect-1/1.2 overflow-hidden rounded-bottom hover:scale-110 duration-1000">
+      <div className="group basis-96 xl:max-w-80 lg:max-w-72 max-w-64 grow relative z-10 aspect-1/1.2 overflow-hidden rounded-bottom hover:scale-110 duration-1000">
         <Image
           width={500}
           height={400}
@@ -14,7 +14,7 @@ export default function Profile() {
         />
         <Image
           className=" absolute z-20 bottom-0 left-0 right-0 mx-auto translate-y-[70px] group-hover:translate-y-[60px] duration-500"
-          src="/profile_image.png"
+          src="/profile2.png"
           alt="Profile Image"
           width={300}
           height={200}

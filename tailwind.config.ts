@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
@@ -139,6 +140,9 @@ const config = {
     },
   },
   plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("notfirst", "&:not(:first-child)");
+    }),
     require("tailwindcss-animate"),
     addVariablesForColors,
   ],

@@ -91,7 +91,7 @@ export const DirectionAwareHover = ({
           <motion.div
             variants={variants}
             className={cn(
-              "h-full w-full relative bg-gray-50 dark:bg-black"
+              "h-full w-full relative bg-zinc-800"
             )}
             transition={{
               duration: 0.2,
@@ -115,7 +115,7 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
             className={cn(
-              "text-white absolute bottom-20 left-4 z-40",
+              "text-white absolute bottom-16 left-4 z-40",
               childrenClassName
             )}
           >
@@ -137,7 +137,7 @@ const variants = {
     y: 0,
   },
   top: {
-    y: 20,
+    y: 10,
   },
   bottom: {
     y: -10,
