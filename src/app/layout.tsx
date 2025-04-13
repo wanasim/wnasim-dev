@@ -28,12 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${local.className} ${inter.className}} flex bg-black`}
+        className={`${local.className} ${inter.className}} flex bg-black bg-[url('/noise_light.png')]`}
       >
         <div className="flex w-full overflow-x-hidden">
           <div className="fixed inset-0 flex h-full justify-center sm:px-8">
-            <div className="flex w-full max-w-7xl lg:px-8">
-              <div className="relative h-full w-full ring-2 bg-zinc-900 ring-zinc-300/20 px-12"></div>
+            <div className="flex w-full max-w-7xl lg:px-2">
+              <div className="relative h-full w-full ring-2  bg-zinc-900 ring-zinc-600/90 px-12"></div>
             </div>
           </div>
           <div className="relative flex w-full flex-col">

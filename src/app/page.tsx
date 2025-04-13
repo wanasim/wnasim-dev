@@ -20,6 +20,7 @@ export default function Home() {
   return (
     <>
       <Profile />
+
       <div className="px-4 sm:px-8 lg:px-12">
         <div className="px-8 ">
           <div className="mt-32">
