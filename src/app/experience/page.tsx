@@ -14,7 +14,7 @@ export default function Page() {
       name: "Evolent Health",
       logo: Evolent,
       year: "2005",
-      background: "bg-zinc-700",
+      background: "bg-primary-dark",
       imageSize: "h-1/5",
     },
     {
@@ -30,10 +30,10 @@ export default function Page() {
       <div className="px-4 sm:px-8 lg:px-12">
         <div className="px-8 ">
           <header className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-zinc-100">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-primary">
               Some title
             </h1>
-            <p className="mt-6 text-base text-zinc-400">
+            <p className="mt-6 text-base text-primary-muted">
               some intro
             </p>
           </header>

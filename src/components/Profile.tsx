@@ -23,11 +23,11 @@ export default function Profile() {
       </div>
 
       <div className="max-w-2xl">
-        <h1 className="  font-bold text-zinc-100 text-4xl text-balance sm:text-5xl inline-flex">
+        <h1 className="font-bold text-4xl text-balance sm:text-5xl inline-flex text-primary">
           Software engineer, blockchain enthusiast, and
           crypto trader.
         </h1>
-        <p className="grow mt-6 text-lg md:text-xl text-zinc-400">
+        <p className="grow mt-6 text-lg md:text-xl text-primary-muted">
           I&apos;m Walid, a full-stack software engineer
           based in Arlington, Va. I currently work as a
           senior engineer and team lead Mastercard where we

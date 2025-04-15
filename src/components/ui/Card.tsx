@@ -54,7 +54,7 @@ Card.Title = function CardTitle({
   let Component = as ?? "h2";
 
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component className="text-base font-semibold tracking-tight text-primary-dark dark:text-primary">
       {href ? (
         <Card.Link href={href}>{children}</Card.Link>
       ) : (
@@ -68,7 +68,7 @@ Card.Description = function CardDescription({
   children,
 }: any) {
   return (
-    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <p className="relative z-10 mt-2 text-sm text-primary-muted dark:text-primary-muted">
       {children}
     </p>
   );
@@ -99,7 +99,7 @@ Card.Eyebrow = function CardEyebrow({
     <Component
       className={clsx(
         className,
-        "relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500",
+        "relative z-10 order-first mb-3 flex items-center text-sm text-primary-muted dark:text-primary-muted",
         decorate && "pl-3.5"
       )}
       {...props}
@@ -109,7 +109,7 @@ Card.Eyebrow = function CardEyebrow({
           className="absolute inset-y-0 left-0 flex items-center"
           aria-hidden="true"
         >
-          <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
+          <span className="h-4 w-0.5 rounded-full bg-primary-muted dark:bg-primary-muted" />
         </span>
       )}
       {children}

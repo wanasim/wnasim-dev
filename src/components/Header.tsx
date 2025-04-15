@@ -1,9 +1,9 @@
-"use client";
-import Profile from "./Profile";
-import Menu from "./Menu";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import clsx from "clsx";
+'use client';
+import Profile from './Profile';
+import Menu from './Menu';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 
 export default function Header() {
   const [showNav, updateShowNav] = useState(true);
@@ -11,7 +11,7 @@ export default function Header() {
   useEffect(() => {
     let prevScrollY = window.scrollY;
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       const currScrollY = window.scrollY;
 
       if (currScrollY > 100 && prevScrollY < currScrollY) {
@@ -26,17 +26,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative h-40 z-50 flex flex-none flex-col">
+      <header className="relative z-50 flex h-40 flex-none flex-col bg-primary">
         <div
           className={clsx(
-            "fixed z-10 w-full top-10 sm:px-8  transition-all ease-in",
-            showNav ? "opacity-100" : "opacity-0"
+            'fixed top-10 z-10 w-full transition-all ease-in sm:px-8',
+            showNav ? 'opacity-100' : 'opacity-0'
           )}
         >
           <div className="mx-auto w-full max-w-7xl lg:px-8">
             <Menu />
           </div>
         </div>
+        <div className="absolute inset-x-0 -bottom-5 h-8 after:absolute after:inset-x-0 after:left-0 after:top-0 after:h-28 after:bg-[url('/curvy33.svg')] after:bg-contain after:bg-repeat-x after:content-['']"></div>
       </header>
     </>
   );

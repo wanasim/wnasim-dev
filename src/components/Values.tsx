@@ -28,11 +28,11 @@ export default function Values() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div
-                className="hover:bg-zinc-700 ease-linear delay-75 transition p-4 rounded-lg"
+                className="hover:bg-primary-hover ease-linear delay-75 transition p-4 rounded-lg"
                 key={feature.name}
               >
                 <div className="relative pl-16">
-                  <dt className="text-xl font-semibold leading-7">
+                  <dt className="text-xl font-semibold leading-7 text-primary">
                     <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500">
                       {/* <feature.icon
                         className="h-6 w-6 text-white"
@@ -41,7 +41,7 @@ export default function Values() {
                     </div>
                     {feature.name}
                   </dt>
-                  <dd className="mt-2 text-lg leading-7 text-zinc-400">
+                  <dd className="mt-2 text-lg leading-7 text-primary-muted">
                     {feature.description}
                   </dd>
                 </div>
