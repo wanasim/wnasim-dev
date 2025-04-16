@@ -33,6 +33,9 @@ const config = {
           hover: '#d8d4c9',
           dark: '#18181b',
         },
+        brand: {
+          DEFAULT: 'rgba(49, 57, 251, 1)',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

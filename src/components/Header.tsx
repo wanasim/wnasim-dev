@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative z-50 flex h-40 flex-none flex-col bg-primary">
+      <header className="bg-brand relative z-50 flex h-40 flex-none flex-col">
         <div
           className={clsx(
             'fixed top-10 z-10 w-full transition-all ease-in sm:px-8',
