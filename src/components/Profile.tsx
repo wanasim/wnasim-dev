@@ -1,10 +1,62 @@
-import Image from "next/image";
+import { MailIcon } from 'lucide-react';
+import Image from 'next/image';
+import SocialLink from './SocialLink';
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  InstagramIcon,
+  XIcon,
+} from './ui/SocialIcons';
+import { FileIcon } from '@radix-ui/react-icons';
 
 export default function Profile() {
   return (
-    <div className="relative flex items-end flex-wrap gap-16 px-4 sm:px-8 lg:px-12">
-      <div className="group basis-96 xl:max-w-80 lg:max-w-72 max-w-64 grow relative z-10 aspect-1/1.2 overflow-hidden rounded-bottom hover:scale-110 duration-1000">
+    <div className="relative flex flex-wrap items-end gap-8">
+      <div className="relative flex h-32 w-32 items-end justify-center">
         <Image
+          src="/avatar2.jpg"
+          alt=""
+          width={400}
+          height={400}
+          className="flex-0 absolute z-30 flex h-28 w-28 rounded-full bg-zinc-800 object-cover ring-1 ring-zinc-300/20 ring-offset-2 ring-offset-black blur-[.75] duration-200 hover:h-32 hover:w-32"
+        />
+      </div>
+      <div className="flex flex-col gap-1">
+        <h1 className="text-balance text-4xl font-bold tracking-wide text-white">
+          Walid Nasim
+        </h1>
+        <h2 className="text-balance text-2xl font-bold tracking-wide text-gray-400">
+          Software Engineer
+        </h2>
+        <div className="flex gap-2">
+          <SocialLink href="https://x.com/n96344" icon={XIcon}></SocialLink>
+          <SocialLink
+            href="https://www.instagram.com/wherezzwaldo/"
+            icon={InstagramIcon}
+          ></SocialLink>
+          <SocialLink
+            href="https://github.com/wanasim"
+            icon={GitHubIcon}
+          ></SocialLink>
+          <SocialLink
+            href="https://linkedin.com/in/walid-nasim"
+            icon={LinkedInIcon}
+          ></SocialLink>
+          <SocialLink
+            href="mailto:walid.nasim@wnasim.dev"
+            icon={MailIcon}
+          ></SocialLink>
+          <SocialLink
+            href="/wnasim_resume.pdf"
+            icon={FileIcon}
+            customStyle={true}
+            download="wnasim_resume.pdf"
+          ></SocialLink>
+        </div>
+      </div>
+
+      {/* <div className="group relative z-10 aspect-1/1.2 max-w-64 grow basis-96 overflow-hidden rounded-bottom duration-1000 hover:scale-110 lg:max-w-72 xl:max-w-80"> */}
+      {/* <Image
           width={500}
           height={400}
           alt="Background Image"
@@ -19,23 +71,21 @@ export default function Profile() {
           width={300}
           height={200}
           priority
-        />
-      </div>
+        /> */}
+      {/* </div> */}
 
-      <div className="max-w-2xl">
-        <h1 className="font-bold text-4xl text-balance sm:text-5xl inline-flex text-primary">
-          Software engineer, blockchain enthusiast, and
-          crypto trader.
+      {/* <div className="max-w-2xl">
+        <h1 className="inline-flex text-balance text-4xl font-bold text-primary sm:text-5xl">
+          Software engineer, blockchain enthusiast, and crypto trader.
         </h1>
-        <p className="grow mt-6 text-lg md:text-xl text-primary-muted">
-          I&apos;m Walid, a full-stack software engineer
-          based in Arlington, Va. I currently work as a
-          senior engineer and team lead Mastercard where we
-          focus the founder and CEO of Planetaria, where we
-          develop technologies that empower regular people
-          to explore space on their own terms.
+        <p className="mt-6 grow text-lg text-primary-muted md:text-xl">
+          I&apos;m Walid, a full-stack software engineer based in Arlington, Va.
+          I currently work as a senior engineer and team lead Mastercard where
+          we focus the founder and CEO of Planetaria, where we develop
+          technologies that empower regular people to explore space on their own
+          terms.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

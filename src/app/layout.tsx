@@ -28,13 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${local.className} ${inter.className}} flex bg-zinc-900`}
+        className={`${local.className} ${inter.className}} flex overflow-x-hidden bg-zinc-900`}
       >
         <div className="relative flex h-[100vh] w-full flex-col">
-          <Header />
+          {/* <Header /> */}
           <main className="flex-auto">
-            <div className="relative -mb-3 pt-10 sm:px-8">
-              <div className="mx-auto w-full max-w-7xl lg:px-8">{children}</div>
+            <div className="relative -mb-3 pt-16 sm:px-8">
+              <div className="mx-auto w-full max-w-5xl lg:px-8">{children}</div>
             </div>
           </main>
           <Footer />

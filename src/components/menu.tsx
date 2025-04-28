@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,11 +9,11 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
-} from "@/components/ui/NavigationMenu";
-import Link from "next/link";
-import { BackgroundGradientAnimation } from "./ui/BackgroundGradientAnimation";
+} from '@/components/ui/NavigationMenu';
+import Link from 'next/link';
+import { BackgroundGradientAnimation } from './ui/BackgroundGradientAnimation';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Menu() {
   return (
@@ -24,52 +24,36 @@ export default function Menu() {
           alt=""
           width={400}
           height={400}
-          className=" flex flex-0 z-30 rounded-full blur-[.75] ring-1 ring-offset-2 ring-offset-black ring-zinc-300/20 object-cover bg-zinc-800 h-14 w-14"
+          className="flex-0 z-30 flex h-14 w-14 rounded-full bg-zinc-800 object-cover ring-1 ring-zinc-300/20 ring-offset-2 ring-offset-black blur-[.75]"
         />
       </Link>
-      <div className="w-full z-10  flex flex-1 justify-end md:justify-center">
+      <div className="z-10 flex w-full flex-1 justify-end md:justify-center">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   About
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link
-                href="/experience"
-                legacyBehavior
-                passHref
-              >
-                <NavigationMenuLink
-                  className={navigationMenuTriggerStyle()}
-                >
+              <Link href="/experience" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Experience
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link
-                href="/projects"
-                legacyBehavior
-                passHref
-              >
-                <NavigationMenuLink
-                  className={navigationMenuTriggerStyle()}
-                >
+              <Link href="/projects" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Projects
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contact
                 </NavigationMenuLink>
               </Link>

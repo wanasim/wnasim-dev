@@ -28,8 +28,8 @@ const config = {
       },
       colors: {
         primary: {
-          DEFAULT: '#efebe0',
-          muted: '#a8a59e',
+          DEFAULT: 'rgb(222 218 207)',
+          muted: 'rgb(222 218 207)',
           hover: '#d8d4c9',
           dark: '#18181b',
         },

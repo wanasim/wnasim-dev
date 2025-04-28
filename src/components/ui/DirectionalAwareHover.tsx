@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRef, useState } from "react";
-import Image, { StaticImageData } from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useRef, useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export const DirectionAwareHover = ({
   imageUrl,
@@ -13,7 +13,7 @@ export const DirectionAwareHover = ({
   rotation,
   className,
 }: {
-  imageUrl: StaticImageData;
+  imageUrl: string;
   children: React.ReactNode | string;
   rotation: string;
   childrenClassName?: string;
@@ -23,8 +23,8 @@ export const DirectionAwareHover = ({
   const ref = useRef<HTMLDivElement>(null);
 
   const [direction, setDirection] = useState<
-    "top" | "bottom" | "left" | "right" | string
-  >("left");
+    'top' | 'bottom' | 'left' | 'right' | string
+  >('left');
 
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -32,22 +32,22 @@ export const DirectionAwareHover = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
+    console.log('direction', direction);
     switch (direction) {
       case 0:
-        setDirection("top");
+        setDirection('top');
         break;
       case 1:
-        setDirection("right");
+        setDirection('right');
         break;
       case 2:
-        setDirection("bottom");
+        setDirection('bottom');
         break;
       case 3:
-        setDirection("left");
+        setDirection('left');
         break;
       default:
-        setDirection("left");
+        setDirection('left');
         break;
     }
   };
@@ -56,18 +56,10 @@ export const DirectionAwareHover = ({
     ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
     obj: HTMLElement
   ) => {
-    const {
-      width: w,
-      height: h,
-      left,
-      top,
-    } = obj.getBoundingClientRect();
-    const x =
-      ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
-    const y =
-      ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
-    const d =
-      Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+    const { width: w, height: h, left, top } = obj.getBoundingClientRect();
+    const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
+    const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
+    const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
     return d;
   };
 
@@ -76,7 +68,7 @@ export const DirectionAwareHover = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        "md:h-96 w-60 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
+        'group/card relative h-52 w-52 overflow-hidden rounded-lg bg-transparent md:h-96 md:w-80',
         className
       )}
     >
@@ -87,23 +79,23 @@ export const DirectionAwareHover = ({
           whileHover={direction}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
+          <motion.div className="absolute inset-0 z-10 hidden h-full w-full bg-black/40 transition duration-500 group-hover/card:block" />
           <motion.div
             variants={variants}
-            className={cn(
-              "h-full w-full relative bg-zinc-800"
-            )}
+            className={cn('relative h-full w-full bg-zinc-800')}
             transition={{
               duration: 0.2,
-              ease: "easeOut",
+              ease: 'easeOut',
             }}
           >
             <Image
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.12] bg-zinc-800",
+                'h-full w-full scale-[1.12] bg-zinc-800 object-cover',
                 imageClassName
               )}
+              width={1000}
+              height={1000}
               sizes="(min-width: 640px) 18rem, 11rem"
               src={imageUrl}
             />
@@ -112,10 +104,10 @@ export const DirectionAwareHover = ({
             variants={textVariants}
             transition={{
               duration: 0.5,
-              ease: "easeOut",
+              ease: 'easeOut',
             }}
             className={cn(
-              "text-white absolute bottom-16 left-4 z-40",
+              'absolute bottom-16 left-4 z-40 text-white',
               childrenClassName
             )}
           >

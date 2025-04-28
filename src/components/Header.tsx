@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-brand relative z-50 flex h-40 flex-none flex-col">
+      <header className="relative z-50 flex h-40 flex-none flex-col">
         <div
           className={clsx(
             'fixed top-10 z-10 w-full transition-all ease-in sm:px-8',
@@ -37,7 +37,7 @@ export default function Header() {
             <Menu />
           </div>
         </div>
-        <div className="absolute inset-x-0 -bottom-5 h-8 after:absolute after:inset-x-0 after:left-0 after:top-0 after:h-28 after:bg-[url('/curvy33.svg')] after:bg-contain after:bg-repeat-x after:content-['']"></div>
+        {/* <div className="absolute inset-x-0 -bottom-5 h-8 after:absolute after:inset-x-0 after:left-0 after:top-0 after:h-28 after:bg-[url('/curvy33.svg')] after:bg-contain after:bg-repeat-x after:content-['']"></div> */}
       </header>
     </>
   );

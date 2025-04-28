@@ -1,24 +1,24 @@
 export default function Values() {
   const features = [
     {
-      name: "Push to deploy",
+      name: 'Push to deploy',
       description:
-        "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
     },
     {
-      name: "SSL certificates",
+      name: 'SSL certificates',
       description:
-        "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+        'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
     },
     {
-      name: "Simple queues",
+      name: 'Simple queues',
       description:
-        "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+        'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
     },
     {
-      name: "Advanced security",
+      name: 'Advanced security',
       description:
-        "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+        'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
     },
   ];
   return (
@@ -28,11 +28,11 @@ export default function Values() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div
-                className="hover:bg-primary-hover ease-linear delay-75 transition p-4 rounded-lg"
+                className="rounded-lg p-4 transition delay-75 ease-linear hover:bg-primary-hover"
                 key={feature.name}
               >
                 <div className="relative pl-16">
-                  <dt className="text-xl font-semibold leading-7 text-primary">
+                  <dt className="text-xl font-semibold leading-7 text-white">
                     <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500">
                       {/* <feature.icon
                         className="h-6 w-6 text-white"
@@ -41,7 +41,7 @@ export default function Values() {
                     </div>
                     {feature.name}
                   </dt>
-                  <dd className="mt-2 text-lg leading-7 text-primary-muted">
+                  <dd className="mt-2 text-lg leading-7 text-gray-400">
                     {feature.description}
                   </dd>
                 </div>

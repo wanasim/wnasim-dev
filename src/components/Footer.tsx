@@ -73,57 +73,33 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="relative top-20">
+    <footer className="relative top-32">
       <div className="absolute inset-x-0 -top-3 z-10 h-8 after:absolute after:inset-x-0 after:left-0 after:top-0 after:h-28 after:bg-[url('/curvy4.svg')] after:bg-contain after:bg-repeat-x after:content-['']"></div>
-      <div className="relative bg-primary bg-[url('/noise_light.png')]">
-        <div className="mx-auto w-full max-w-7xl lg:px-8">
-          <div className="px-4 sm:px-8 lg:px-12">
-            <div className="relative px-8 py-16">
-              <div className="pt-8 md:flex md:items-center md:justify-between">
-                <div className="flex items-start space-x-6 md:order-1">
-                  <SocialLink href="#" icon={XIcon}></SocialLink>
-                  <SocialLink href="#" icon={InstagramIcon}></SocialLink>
-                  <SocialLink href="#" icon={GitHubIcon}></SocialLink>
-                  <SocialLink href="#" icon={LinkedInIcon}></SocialLink>
-                  <SocialLink
-                    href="mailto:spencer@planetaria.tech"
-                    icon={MailIcon}
-                  ></SocialLink>
-                </div>
-                <p className="mt-8 text-xs leading-5 text-primary-muted md:order-2 md:mt-0">
-                  <span className="block text-inherit">
-                    {' '}
-                    Made with <span className="text-red-600">&hearts;</span> in
-                    North Carolina, USA &#x1F1FA;&#x1F1F8; .
-                  </span>
-                  <span className="block text-inherit">
-                    Built with{' '}
-                    <Link
-                      href="https://nextjs.org/"
-                      className="font-bold hover:text-sky-500"
-                    >
-                      NextJS
-                    </Link>{' '}
-                    and{' '}
-                    <Link
-                      href="https://tailwindcss.com/"
-                      className="font-bold hover:text-sky-500"
-                    >
-                      Tailwind CSS
-                    </Link>
-                    . Deployed on{' '}
-                    <Link
-                      href="https://vercel.com/"
-                      className="font-bold hover:text-sky-500"
-                    >
-                      Vercel.
-                    </Link>
-                  </span>
-                  <span className="block text-inherit">
-                    &copy; Walid Nasim. All rights reserved.
-                  </span>
-                </p>
+      <div className="mb-4 sm:px-8">
+        <div className="mx-auto w-full max-w-5xl lg:px-8">
+          <div className="px-6 sm:px-8 lg:px-12">
+            <div className="px-8 pt-8 md:flex md:items-center md:justify-between">
+              <div className="flex items-start space-x-6 italic text-gray-400">
+                {/* <SocialLink href="#" icon={XIcon}></SocialLink>
+                <SocialLink href="#" icon={InstagramIcon}></SocialLink>
+                <SocialLink href="#" icon={GitHubIcon}></SocialLink>
+                <SocialLink href="#" icon={LinkedInIcon}></SocialLink>
+                <SocialLink
+                  href="mailto:spencer@planetaria.tech"
+                  icon={MailIcon}
+                ></SocialLink> */}
+                A healthy disregard for the impossible.
               </div>
+              <p className="mt-8 text-sm leading-5 text-gray-400 md:order-2 md:mt-0">
+                <span className="block text-inherit">
+                  {' '}
+                  Made with <span className="text-red-600">&hearts;</span> in
+                  North Carolina .
+                </span>
+                <span className="block text-inherit">
+                  &copy; Walid Nasim. All rights reserved.
+                </span>
+              </p>
             </div>
           </div>
         </div>
