@@ -1,6 +1,6 @@
 'use client';
 import Profile from './Profile';
-import Menu from './Menu';
+import Menu from './menu';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';

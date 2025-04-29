@@ -106,10 +106,10 @@ export default function CometUI() {
                 Foundations and Styles
               </h3>
               <p className="text-gray-400">
-                Comet's foundations offer a visual language and structure that
-                guarantee a consistent application of design principles across
-                all products. These building blocks enable teams to create
-                accessible, cohesive solutions for users.
+                Comet&apos;s foundations offer a visual language and structure
+                that guarantee a consistent application of design principles
+                across all products. These building blocks enable teams to
+                create accessible, cohesive solutions for users.
               </p>
             </div>
           </AnimatedFeatureCard>
@@ -134,10 +134,10 @@ export default function CometUI() {
               </h3>
               <p className="text-gray-400">
                 Our extensive set of components and patterns accelerates the
-                build and experience for all teams. Comet's architecture ensures
-                each component is flexible enough to meet each company's needs
-                while being rigid enough to create structure and cohesion for a
-                user's cross-platform journey.
+                build and experience for all teams. Comet&apos;s architecture
+                ensures each component is flexible enough to meet each
+                company&apos;s needs while being rigid enough to create
+                structure and cohesion for a user&apos;s cross-platform journey.
               </p>
             </div>
           </AnimatedFeatureCard>
@@ -161,10 +161,10 @@ export default function CometUI() {
                 Guidelines and Best Practices
               </h3>
               <p className="text-gray-400">
-                Comet's guidelines help product designers and developers make
-                informed decisions, ensuring quality and consistency across all
-                products. These include accessibility standards, research, and
-                platform-specific recommendations.
+                Comet&apos;s guidelines help product designers and developers
+                make informed decisions, ensuring quality and consistency across
+                all products. These include accessibility standards, research,
+                and platform-specific recommendations.
               </p>
             </div>
           </AnimatedFeatureCard>
