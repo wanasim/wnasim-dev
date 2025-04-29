@@ -1,48 +1,67 @@
 import Image from 'next/image';
+import {
+  AnimatedSection,
+  AnimatedContent,
+  AnimatedImage,
+  AnimatedFeatureCard,
+} from '@/components/AnimatedSection';
 
 export default function CometUI() {
   return (
     <div className="space-y-20">
       {/* Title Section */}
-      <div>
+      <AnimatedSection delay={0.2}>
         <h1 className="text-4xl font-bold text-white sm:text-5xl">Comet UI</h1>
         <p className="mt-2 text-xl text-gray-400">
           Mastercard&apos;s Design System
         </p>
-        <Image
-          src="/comet_snapshot.png"
-          alt="Comet UI Snapshot"
-          width={1200}
-          height={600}
-          className="rounded-lg object-cover py-4"
-        />
-      </div>
+        <AnimatedImage delay={0.4}>
+          <Image
+            src="/comet_snapshot.png"
+            alt="Comet UI Snapshot"
+            width={1200}
+            height={600}
+            className="rounded-lg object-cover py-4"
+          />
+        </AnimatedImage>
+      </AnimatedSection>
 
       {/* Problem Section */}
-      <section>
-        <h2 className="text-3xl font-semibold text-white">The Challenge</h2>
-        <div className="mt-6 space-y-4 text-gray-400">
+      <AnimatedSection delay={0.6}>
+        <h2 className="text-3xl font-semibold text-indigo-500">
+          The Challenge
+        </h2>
+        <div className="mt-6 space-y-4 text-xl text-white">
           <p>
             Before Comet UI, Mastercard&apos;s development teams faced several
             critical challenges:
           </p>
-          <ul className="list-disc space-y-2 pl-6">
-            <li>Inconsistent user experiences across different applications</li>
-            <li>Accessibility issues affecting compliance and user reach</li>
-            <li>Duplicated development efforts and redundant code</li>
-            <li>Lack of standardization in design patterns and components</li>
-            <li>Slow development cycles due to reinventing common solutions</li>
-            <li>Fragmented Angular component libraries across teams</li>
-          </ul>
+          <AnimatedContent delay={0.8}>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>
+                Inconsistent user experiences across different applications
+              </li>
+              <li>Accessibility issues affecting compliance and user reach</li>
+              <li>Duplicated development efforts and redundant code</li>
+              <li>Lack of standardization in design patterns and components</li>
+              <li>
+                Slow development cycles due to reinventing common solutions
+              </li>
+              <li>Fragmented Angular component libraries across teams</li>
+            </ul>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Strategy Section */}
-      <section>
-        <h2 className="text-3xl font-semibold text-white">Our Approach</h2>
+      <AnimatedSection delay={1}>
+        <h2 className="text-3xl font-semibold text-indigo-500">Our Approach</h2>
         <div className="mt-6 space-y-8">
           {/* 1. Snapshot: Image left, text right */}
-          <div className="flex flex-col items-center gap-8 md:flex-row">
+          <AnimatedFeatureCard
+            delay={1.2}
+            className="flex flex-col items-center gap-8 md:flex-row"
+          >
             <div className="flex-1">
               <Image
                 src="/interface.png"
@@ -66,10 +85,13 @@ export default function CometUI() {
                 Angular&apos;s powerful features and ecosystem.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 2. Foundations and Styles: Image right, text left */}
-          <div className="flex flex-col items-center gap-8 md:flex-row-reverse">
+          <AnimatedFeatureCard
+            delay={1.4}
+            className="flex flex-col items-center gap-8 md:flex-row-reverse"
+          >
             <div className="flex-1">
               <Image
                 src="/foundations.png"
@@ -79,7 +101,7 @@ export default function CometUI() {
                 className="rounded-lg object-cover"
               />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 space-y-4">
               <h3 className="text-xl font-medium text-white">
                 Foundations and Styles
               </h3>
@@ -90,10 +112,13 @@ export default function CometUI() {
                 accessible, cohesive solutions for users.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 3. Reusable Components and Patterns: Image left, text right */}
-          <div className="flex flex-col items-center gap-8 md:flex-row">
+          <AnimatedFeatureCard
+            delay={1.6}
+            className="flex flex-col items-center gap-8 md:flex-row"
+          >
             <div className="flex-1">
               <Image
                 src="/components_patterns.png"
@@ -103,7 +128,7 @@ export default function CometUI() {
                 className="rounded-lg object-cover"
               />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 space-y-4">
               <h3 className="text-xl font-medium text-white">
                 Reusable Components and Patterns
               </h3>
@@ -115,10 +140,13 @@ export default function CometUI() {
                 user's cross-platform journey.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 4. Guidelines and Best Practices: Image right, text left */}
-          <div className="flex flex-col items-center gap-8 md:flex-row-reverse">
+          <AnimatedFeatureCard
+            delay={1.8}
+            className="flex flex-col items-center gap-8 md:flex-row-reverse"
+          >
             <div className="flex-1">
               <Image
                 src="/guidelines.png"
@@ -128,7 +156,7 @@ export default function CometUI() {
                 className="rounded-lg object-cover"
               />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 space-y-4">
               <h3 className="text-xl font-medium text-white">
                 Guidelines and Best Practices
               </h3>
@@ -139,30 +167,39 @@ export default function CometUI() {
                 platform-specific recommendations.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Solution Section */}
-      <section>
-        <h2 className="text-3xl font-semibold text-white">The Impact</h2>
+      <AnimatedSection delay={2}>
+        <h2 className="text-3xl font-semibold text-indigo-500">The Impact</h2>
         <div className="mt-6 space-y-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="rounded-lg bg-zinc-800/50 p-6">
+            <AnimatedFeatureCard
+              delay={2.2}
+              className="rounded-lg bg-zinc-800/50 p-6"
+            >
               <h3 className="text-xl font-medium text-white">
                 Development Speed
               </h3>
               <p className="mt-2 text-gray-400">
                 40% reduction in development time for new features
               </p>
-            </div>
-            <div className="rounded-lg bg-zinc-800/50 p-6">
+            </AnimatedFeatureCard>
+            <AnimatedFeatureCard
+              delay={2.4}
+              className="rounded-lg bg-zinc-800/50 p-6"
+            >
               <h3 className="text-xl font-medium text-white">Accessibility</h3>
               <p className="mt-2 text-gray-400">
                 100% WCAG 2.1 AA compliance across all components
               </p>
-            </div>
-            <div className="rounded-lg bg-zinc-800/50 p-6">
+            </AnimatedFeatureCard>
+            <AnimatedFeatureCard
+              delay={2.6}
+              className="rounded-lg bg-zinc-800/50 p-6"
+            >
               <h3 className="text-xl font-medium text-white">
                 User Experience
               </h3>
@@ -170,25 +207,29 @@ export default function CometUI() {
                 Consistent, polished interfaces across all Mastercard
                 applications
               </p>
-            </div>
+            </AnimatedFeatureCard>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Future Section */}
-      <section>
-        <h2 className="text-3xl font-semibold text-white">Looking Forward</h2>
-        <div className="mt-6 space-y-4 text-gray-400">
+      <AnimatedSection delay={2.4}>
+        <h2 className="text-3xl font-semibold text-indigo-500">
+          Looking Forward
+        </h2>
+        <div className="mt-6 space-y-4 text-xl text-white">
           <p>Comet UI continues to evolve, with ongoing improvements in:</p>
-          <ul className="list-disc space-y-2 pl-6">
-            <li>Enhanced component customization options</li>
-            <li>Expanded design token system</li>
-            <li>Improved performance optimizations</li>
-            <li>New component additions based on team feedback</li>
-            <li>Integration with emerging technologies and frameworks</li>
-          </ul>
+          <AnimatedContent delay={2.6}>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>Enhanced component customization options</li>
+              <li>Expanded design token system</li>
+              <li>Improved performance optimizations</li>
+              <li>New component additions based on team feedback</li>
+              <li>Integration with emerging technologies and frameworks</li>
+            </ul>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }

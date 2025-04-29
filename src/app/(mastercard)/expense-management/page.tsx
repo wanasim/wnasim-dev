@@ -1,57 +1,75 @@
 import Image from 'next/image';
+import {
+  AnimatedSection,
+  AnimatedContent,
+  AnimatedImage,
+  AnimatedFeatureCard,
+} from '@/components/AnimatedSection';
 
 export default function ExpenseManagement() {
   return (
     <div>
-      <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-        Expense Management
-      </h2>
-      <p className="mt-6 text-base text-gray-400">
-        One of the core products I built at Mastercard. A web and mobile app
-        that allows users to manage their corporate credit cards, approval
-        workflows, enrich transactions, and more.
-      </p>
-      <Image
-        src="/smartdatacover.png"
-        alt="Expense Management Overview"
-        width={1200}
-        height={600}
-        className="rounded-lg object-cover py-4"
-      />
+      <AnimatedSection delay={0.2}>
+        <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          Expense Management
+        </h2>
+        <p className="mt-2 text-xl text-gray-400">
+          One of the core products I built at Mastercard. A web and mobile app
+          that allows users to manage their corporate credit cards, approval
+          workflows, enrich transactions, and more.
+        </p>
+        <AnimatedImage delay={0.4}>
+          <Image
+            src="/smartdatacover.png"
+            alt="Expense Management Overview"
+            width={1200}
+            height={600}
+            className="rounded-lg object-cover py-4"
+          />
+        </AnimatedImage>
+      </AnimatedSection>
 
       {/* Objective */}
-      <section>
-        <h2 className="mt-16 text-3xl font-semibold text-white">
+      <AnimatedSection delay={0.6}>
+        <h2 className="mt-16 text-3xl font-semibold text-indigo-500">
           Objectives & Goals
         </h2>
-        <div className="mt-6 space-y-8">
-          Our key offering for our users is a platform called Smart Data which
-          is made up of a bunch of different applications connected to a myriad
-          of APIs and data sources. One of the primary apps I worked on was to
-          modernize a legacy app called Expense Management. As the name implies
-          it enables our users to manage the lifecycle of their transactions.
-          Our key objective was to modernize this both from a frontend/UI
-          perspective as well as from an API tier since the current monolith
-          architecture was becoming difficult to maintain and troubleshoot. I
-          helped modernize the app by migrating it to a new tech stack - Angular
-          and Java SpringBoot - that was more maintainable and scalable. I also
-          helped improve the overall user experience by adding new features and
-          improving the existing ones. Also, leveraging a microservices
-          architecture helped us break down the monolith and enable faster
-          development and deployment cycles. It also helped to minimize risk
-          since we could now deploy smaller chunks of code more frequently, and
-          troubleshoot points of failure.
+        <div className="mt-6 space-y-4 text-xl text-white">
+          <AnimatedContent delay={0.8}>
+            <p>
+              Our key offering for our users is a platform called Smart Data
+              which is made up of a bunch of different applications connected to
+              a myriad of APIs and data sources. One of the primary apps I
+              worked on was to modernize a legacy app called Expense Management.
+              As the name implies it enables our users to manage the lifecycle
+              of their transactions. Our key objective was to modernize this
+              both from a frontend/UI perspective as well as from an API tier
+              since the current monolith architecture was becoming difficult to
+              maintain and troubleshoot. I helped modernize the app by migrating
+              it to a new tech stack - Angular and Java SpringBoot - that was
+              more maintainable and scalable. I also helped improve the overall
+              user experience by adding new features and improving the existing
+              ones. Also, leveraging a microservices architecture helped us
+              break down the monolith and enable faster development and
+              deployment cycles. It also helped to minimize risk since we could
+              now deploy smaller chunks of code more frequently, and
+              troubleshoot points of failure.
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Key Features Section */}
-      <section>
-        <h2 className="mt-16 text-3xl font-semibold text-white">
+      <AnimatedSection delay={1}>
+        <h2 className="mt-16 text-3xl font-semibold text-indigo-500">
           Key Features
         </h2>
         <div className="mt-6 space-y-8">
           {/* 1. Expense Dashboard: Image left, text right */}
-          <div className="flex flex-col items-center gap-8 md:flex-row">
+          <AnimatedFeatureCard
+            delay={1.2}
+            className="flex flex-col items-center gap-8 md:flex-row"
+          >
             <div className="w-full md:w-1/2">
               <div className="relative aspect-[16/10] w-10/12 md:w-full">
                 <Image
@@ -77,10 +95,13 @@ export default function ExpenseManagement() {
                 workflows.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 2. Data Enrichment: Image right, text left */}
-          <div className="flex flex-col items-center gap-8 md:flex-row-reverse">
+          <AnimatedFeatureCard
+            delay={1.4}
+            className="flex flex-col items-center gap-8 md:flex-row-reverse"
+          >
             <div className="w-full md:w-1/2">
               <div className="relative aspect-[16/10] w-10/12 md:w-full">
                 <Image
@@ -93,7 +114,7 @@ export default function ExpenseManagement() {
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full space-y-4 md:w-1/2">
               <h3 className="text-xl font-medium text-white">
                 Data Enrichment
               </h3>
@@ -103,10 +124,13 @@ export default function ExpenseManagement() {
                 clearer understanding of their spending patterns.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 3. Approval Workflows: Image left, text right */}
-          <div className="flex flex-col items-center gap-8 md:flex-row">
+          <AnimatedFeatureCard
+            delay={1.6}
+            className="flex flex-col items-center gap-8 md:flex-row"
+          >
             <div className="w-full md:w-1/2">
               <div className="relative aspect-[16/10] w-10/12 md:w-full">
                 <Image
@@ -119,7 +143,7 @@ export default function ExpenseManagement() {
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full space-y-4 md:w-1/2">
               <h3 className="text-xl font-medium text-white">
                 Approval Workflows
               </h3>
@@ -129,10 +153,13 @@ export default function ExpenseManagement() {
                 compliance and accountability at every step.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
 
           {/* 4. Microservices Architecture: Image right, text left */}
-          <div className="flex flex-col items-center gap-8 md:flex-row-reverse">
+          <AnimatedFeatureCard
+            delay={1.8}
+            className="flex flex-col items-center gap-8 md:flex-row-reverse"
+          >
             <div className="w-full md:w-1/2">
               <div className="relative aspect-[16/10] w-10/12 md:w-full">
                 <Image
@@ -145,7 +172,7 @@ export default function ExpenseManagement() {
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full space-y-4 md:w-1/2">
               <h3 className="text-xl font-medium text-white">
                 Microservices Architecture
               </h3>
@@ -155,9 +182,9 @@ export default function ExpenseManagement() {
                 integration with other business systems.
               </p>
             </div>
-          </div>
+          </AnimatedFeatureCard>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }

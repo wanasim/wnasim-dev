@@ -17,7 +17,7 @@ export default function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-visible py-4 sm:gap-8">
+      <div className="flex justify-center gap-5 overflow-visible py-4 sm:gap-8">
         {[
           {
             image: '/zion.png',
@@ -57,8 +57,8 @@ export default function Photos() {
               rotation={rotations[imageIndex % rotations.length]}
               imageClassName="absolute inset-0 h-full w-full object-cover"
             >
-              <p className="text-xl font-bold">{heading}</p>
-              <p className="text-sm font-normal">{subheading}</p>
+              <p className="text-base font-bold md:text-xl">{heading}</p>
+              <p className="text-xs font-normal md:text-sm">{subheading}</p>
             </DirectionAwareHover>
           </div>
         ))}
