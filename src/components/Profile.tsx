@@ -14,7 +14,7 @@ export default function Profile() {
     <div className="relative flex flex-wrap items-end gap-8">
       <div className="relative flex h-32 w-32 items-end justify-center">
         <Image
-          src="/avatar2.jpg"
+          src="/avatar_profile.jpg"
           alt=""
           width={400}
           height={400}
