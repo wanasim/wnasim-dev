@@ -1,9 +1,4 @@
 import clsx from 'clsx';
-import image1 from '../../public/zion.png';
-import image2 from '../../public/garibaldi.png';
-import image3 from '../../public/banff.png';
-import image4 from '../../public/iceland.png';
-import image5 from '../../public/acadia.png';
 import { DirectionAwareHover } from './ui/DirectionalAwareHover';
 
 export default function Photos() {
