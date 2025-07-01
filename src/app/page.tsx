@@ -39,6 +39,25 @@ export default function Home() {
       link: 'https://lit.wnasim.dev',
       external: true,
     },
+    {
+      name: 'Coffee Mate',
+      description: "Dapp version of 'Buy me a coffee'!",
+      link: 'https://coffeemate.wnasim.dev',
+      external: true,
+    },
+    {
+      name: 'Airop',
+      description: 'Airdrop ERC20 tokens',
+      link: 'https://airdrop.wnasim.dev',
+      external: true,
+    },
+    {
+      name: 'Bridge App',
+      description:
+        'Deposit and withdraw ETH between Sepolia and Arbitrum Sepolia.',
+      link: 'https://bridge.wnasim.dev',
+      external: true,
+    },
   ];
 
   const building = [
